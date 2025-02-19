@@ -1,0 +1,102 @@
+/* Fonts Import of word Poppins-semibold of Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.concesionario,
+.concesionario * {
+  box-sizing: border-box;
+}
+.concesionario {
+    background: #191919;
+    height: 2527px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor-imagen {
+    width: 16vw; /* Ancho relativo a la ventana */
+    height: 16vh; /* Alto relativo a la ventana */
+    background-image: url('../Frame1/Images/logo-totes0.png');
+    background-size: contain; /* Ajusta la imagen para cubrir el área */
+    background-position: center; /* Centra la imagen */
+    display: flex; /* Permite posicionar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    margin-left: 3vw;
+    margin-top: 3vh;
+}
+
+
+.explora-nuestra-selecci-n-de-veh-culos-nuevos-y-usados-con-especificaciones-detalladas-fotos-en-alta-calidad-y-opciones-de-financiamiento {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: absolute;
+    left: 88px;
+    top: 514px;
+    width: 708px;
+    height: 165px;
+  }
+
+.encuentra-tu-auto-box{
+    width: 45vw; /* Ancho del recuadro (50% del ancho de la pantalla) */
+    height: auto; /* Altura ajustable según el contenido */
+    margin-top: 18vh;
+    margin-left: 3vw;
+    display: flex; /* Usa flexbox para controlar la disposición */
+    flex-direction: column; /* Apila los elementos en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    padding: 2vw; /* Espacio interno alrededor del contenido */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+  .Encuentra-el-auto-ideal-para-ti-al {
+    color: #ffffff;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 2.5vw; /* Tamaño relativo al ancho de la pantalla */
+    font-weight: 600;
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin: 0; /* Elimina márgenes adicionales */
+  }
+
+  .precio-page{
+    color: #ff335f;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 2.8vw; /* Ligeramente más grande */
+    font-weight: 600;
+    margin-top: 1vh; /* Espacio entre el texto blanco y este */
+  }
+
+
+/* Estilo para el menú superior */
+.barra-menu-top {
+    margin-top: -11vh; /* Lo ubica al inicio vertical */
+    margin-left: 6vw; /* Lo alinea a la izquierda */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    display: flex; /* Usa flexbox para la distribución */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 2vh 3vw; /* Espacio interno (2% vertical, 3% horizontal) */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+    gap: 7vw; /* Espacio entre las opciones del menú */
+}
+
+
+  /* Estilo de los elementos del menú */
+.menu-item {
+    color: white; /* Texto en color blanco */
+    font-family: "Poppins-SemiBold", sans-serif; /* Fuente */
+    font-size: 2.0vw; /* Tamaño relativo al ancho de la pantalla */
+    font-weight: 600; /* Negrita */
+    cursor: pointer; /* Cursor de mano al pasar */
+    transition: transform 1s ease; /* Animación suave */
+}
+
+/* Aumentar el tamaño al pasar el mouse */
+.menu-item:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}

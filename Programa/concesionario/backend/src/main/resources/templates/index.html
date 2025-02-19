@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Ruta correcta con Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/Frame1/styleFrame1.css}">
+
+
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+
+</head>
+
+<body>
+    <div class="concesionario">
+
+        <h1 th:text="${mensaje}"></h1>
+
+
+        
+        <div class="explora-nuestra-selecci-n-de-veh-culos-nuevos-y-usados-con-especificaciones-detalladas-fotos-en-alta-calidad-y-opciones-de-financiamiento">
+            Explora nuestra selección de vehículos nuevos y usados, con especificaciones
+            detalladas, fotos en alta calidad y opciones de financiamiento.
+        </div>
+
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item">Vehículos</span>
+            <span class="menu-item">Repuestos</span>
+            <span class="menu-item">Taller</span>
+            <span class="menu-item">Contacto</span>
+        </div>
+        
+        <!-- Information Contenetor-->
+        <div class="encuentra-tu-auto-box">
+            <span>
+              <span class="Encuentra-el-auto-ideal-para-ti-al">
+                Encuentra el auto ideal para ti, al
+              </span>
+              <span class="precio-page">
+                mejor precio
+              </span>
+            </span>
+          </div>
+
+          
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
