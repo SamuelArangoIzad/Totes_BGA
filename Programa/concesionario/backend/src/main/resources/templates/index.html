@@ -7,10 +7,11 @@
 
     <title>Totes_BGA</title>
     
-    <!-- Ruta correcta con Thymeleaf -->
+    <!-- Correct Rute With Thymeleaf -->
     <link rel="stylesheet" th:href="@{/Frame1/styleFrame1.css}">
 
 
+    <!-- Style Of Thee Page-->
     <style>a,button,input,select,h1,h2,h3,h4,h5,
         * {
             box-sizing: border-box;
@@ -26,21 +27,12 @@
             margin: 0;
             padding: 0;
         }
-        </style>
+      </style>
 
 </head>
 
 <body>
     <div class="concesionario">
-
-        <h1 th:text="${mensaje}"></h1>
-
-
-        
-        <div class="explora-nuestra-selecci-n-de-veh-culos-nuevos-y-usados-con-especificaciones-detalladas-fotos-en-alta-calidad-y-opciones-de-financiamiento">
-            Explora nuestra selección de vehículos nuevos y usados, con especificaciones
-            detalladas, fotos en alta calidad y opciones de financiamiento.
-        </div>
 
 
         <!-- Image Contenetor-->
@@ -55,7 +47,7 @@
             <span class="menu-item">Contacto</span>
         </div>
         
-        <!-- Information Contenetor-->
+        <!-- Title Of Example-->
         <div class="encuentra-tu-auto-box">
             <span>
               <span class="Encuentra-el-auto-ideal-para-ti-al">
@@ -67,7 +59,63 @@
             </span>
           </div>
 
-          
+        <!-- Circle Animation -->
+         <div class="ellipse-animation"></div>
+
+        <!-- Info Text -->
+        <div class="Info-text-exploraselection">
+          Explora nuestra selección de vehículos nuevos y usados, con especificaciones
+          detalladas, fotos en alta calidad y opciones de financiamiento.
+        </div>
+
+        <!-- Image Principal Car-->
+         <div class="principal-car-image"></div>
+
+         <!-- Search Your Favorite Model-->
+          <div class="favorite-model">
+            Encuentra tu Marca Favorita
+          </div>
+
+          <!-- Data -->
+           <div class="data-variedad">
+            Variedad, calidad y confiabilidad en cada marca que ofrecemos
+           </div>
+
+
+
+           <!-- CARS MODELS-->
+
+           <!-- Controller MarcaController With Java-->
+
+           <div class="contenedor-marcas">
+             <div th:each="marca : ${marcas}" class="marca-item">
+                 <p th:text="${marca.nombre}"></p>
+                 <img th:src="@{${marca.imagenUrl}}" alt="Imagen de la marca">
+             </div>
+           </div>
+
+
+
+           <!-- Dont Delete-->
+
+
+           <!-- Estyle of the page in the down part-->
+            <div class="recuadro-inferior">
+              <div class="grupo-info">
+                <span class="info-item">TotesBGA Financiación</span>
+                <span class="info-item">Cookie Settings</span>
+                <span class="info-item">Acerca de</span>
+                <span class="info-item">Privacidad</span>
+                <span class="info-item">Nuestro Sistema</span>
+              </div>
+              <div class="grupo-info">
+                <span class="info-item">Política de Protección De Datos Personales</span>
+                <span class="info-item texto-normal">© 2025. TotesBGA Colombia. Todos los derechos reservados</span>
+                <img src="../Frame1/Images/logo-totes0.png" alt="logo" class="Logo-Imagen-Inferior">
+                
+                <!-- Contenetor Logo-->
+            </div>
+            </div>
 
 
 
