@@ -1,0 +1,146 @@
+/* Fonts Import of word Poppins-semibold of Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.concesionario,
+.concesionario * {
+  box-sizing: border-box;
+}
+.concesionario {
+    background: #191919;
+    height: 2527px;
+    position: relative;
+    overflow: hidden;
+    transition: background 2s;
+}
+
+.contenedor-imagen {
+    width: 18vw; /* Ancho relativo a la ventana */
+    height: 16vh; /* Alto relativo a la ventana */
+    background-image: url('MarcaFrame/Images/logo-totes0.png');
+    background-size: contain; /* Ajusta la imagen para cubrir el área */
+    background-position: center; /* Centra la imagen */
+    display: flex; /* Permite posicionar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    margin-left: 3vw;
+    margin-top: 3vh;
+    transition: background-image 2s ease; /* Transición suave */
+}
+
+
+
+/* Estilo para el menú superior */
+.barra-menu-top {
+  margin-top: -11vh; /* Lo ubica al inicio vertical */
+  margin-left: 6vw; /* Lo alinea a la izquierda */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  display: flex; /* Usa flexbox para la distribución */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 2vh 3vw; /* Espacio interno (2% vertical, 3% horizontal) */
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+  gap: 7vw; /* Espacio entre las opciones del menú */
+  transition: background 2.5s ease-in-out; /* Transición suave */
+}
+
+
+/* Estilo de los elementos del menú */
+.menu-item {
+  color: white; /* Texto en color blanco */
+  font-family: "Poppins-SemiBold", sans-serif; /* Fuente */
+  font-size: 1.8vw; /* Tamaño relativo al ancho de la pantalla */
+  font-weight: 600; /* Negrita */
+  cursor: pointer; /* Cursor de mano al pasar */
+  transition: transform 1s ease; /* Animación suave */
+  transition: color 2.5s ease-in-out; /* Cambio de color suave */
+}
+
+/* Aumentar el tamaño al pasar el mouse */
+.menu-item:hover {
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+  
+  /* Data Down in the page*/
+.recuadro-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    background-color: #2C2C2C;
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre grupos */
+    align-items: center;
+    padding: 1.5vh 5vw; /* Espaciado interno */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+  }
+  
+  .info-item{
+    padding: 5vh 4vw; /* Espacio interno (2% vertical, 3% horizontal) */
+    font-size: 1.0vw; /* Tamaño relativo al ancho de la pantalla */
+    margin-left: -4vw;  /* Asegura que no haya margen izquierdo extra */
+  }
+  
+  .info-item:hover {
+    text-decoration: underline;
+    /*cursor: pointer;*/
+  }
+  
+  .Logo-Imagen-Inferior{
+    width: 15vw;
+    height: auto;
+    margin-left: 9vw;
+    vertical-align: middle;
+    justify-content: center; /* Centra horizontalmente */
+    box-sizing: border-box;
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    margin-top: -7vh;
+  }
+  
+  
+  /*Dark Mode Light Mode*/
+/* Contenedor del switch */
+/* Contenedor del switch (vertical) */
+.switch {
+  width: 2.5vw;  /* 2.5% del ancho de la pantalla */
+  height: 7vh; /* 5% del alto de la pantalla */
+  background-color: #ccc;
+  border-radius: 2.5vw; /* Redondeado según el ancho */
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 93vw;
+  margin-top: -8vh;
+}
+
+/* La ruedita dentro del switch */
+.switch::before {
+  content: "";
+  width: 1.5vw;  /* 2% del ancho de la pantalla */
+  height: 1.5vw;  /* 2% del ancho para mantenerlo circular */
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.5vh; /* Inicialmente arriba */
+  transition: top 0.3s;
+}
+
+/* Cuando el switch está activado */
+.switch.active {
+  background-color: #4CAF50;
+}
+
+.switch.active::before {
+  top: 2.5vh; /* Mueve la ruedita hacia abajo */
+}
+

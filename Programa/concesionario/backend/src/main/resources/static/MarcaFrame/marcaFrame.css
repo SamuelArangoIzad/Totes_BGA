@@ -1,0 +1,108 @@
+/* Fonts Import of word Poppins-semibold of Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Menu Box*/
+.encuentra-tu-auto-box{
+    width: 45vw; /* Ancho del recuadro (50% del ancho de la pantalla) */
+    height: auto; /* Altura ajustable según el contenido */
+    margin-top: 18vh;
+    margin-left: 3vw;
+    display: flex; /* Usa flexbox para controlar la disposición */
+    flex-direction: column; /* Apila los elementos en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    padding: 2vw; /* Espacio interno alrededor del contenido */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+  .Encuentra-el-auto-ideal-para-ti-al {
+    color: #ffffff;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 2.5vw; /* Tamaño relativo al ancho de la pantalla */
+    font-weight: 600;
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin: 0; /* Elimina márgenes adicionales */
+    transition: color 2.0s ease-in-out; /* Transición suave del color */
+  }
+
+  .precio-page{
+    color: #ff335f;
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 2.8vw; /* Ligeramente más grande */
+    font-weight: 600;
+    margin-top: 1vh; /* Espacio entre el texto blanco y este */
+    transition: color 2.0s ease-in-out; 
+  }
+
+
+
+/*Circle*/
+
+.ellipse-animation{
+  background: rgba(217, 217, 217, 0);
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(217, 217, 217, 0.1);
+  border-width: 2vw;
+  width: 40vw;
+  height: 60vh;
+  position: absolute;
+  margin-left: -22vw;
+  margin-top: -30vh;
+}
+
+
+
+/*Info text*/
+.Info-text-exploraselection{
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 400;
+  height: auto;
+  width: 45vw;
+  margin-left: 5vw;
+  transition: color 2.0s ease-in-out; 
+}
+
+/*Image Principal Car*/
+.principal-car-image{
+  width: 50vw; /* Ancho relativo a la ventana */
+  height: 50vh; /* Alto relativo a la ventana */
+  background-image: url('../MarcaFrame/Images/image-440.png');
+  background-size: contain; /* Ajusta la imagen para cubrir el área */
+  background-position: center; /* Centra la imagen */
+  display: flex; /* Permite posicionar el contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  box-sizing: border-box;
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin-left: 48vw;
+  margin-top: -35vh;
+}
+
+/*Favorite model words*/
+.favorite-model{
+  color: #ff335f;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 600;
+  height: auto;
+  width: 45vw;
+  margin-left: 35vw;
+  margin-top: 7vh;
+  transition: color 2.0s ease-in-out; 
+}
+
+/*More Data*/
+.data-variedad{
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 1.4vw;
+  font-weight: 400;
+  margin-left: 28vw;
+  height: auto;
+  transition: color 2.0s ease-in-out; 
+}
+
+

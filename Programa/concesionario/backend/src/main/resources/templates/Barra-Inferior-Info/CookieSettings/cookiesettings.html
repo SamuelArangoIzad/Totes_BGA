@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Correct Rute With Thymeleaf -->
+    <link rel="stylesheet" th:href="@{general.css}">
+
+
+    <!-- Style Of Thee Page-->
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+      </style>
+</head>
+
+<body>
+    <div class="concesionario">
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <script src="/redirections.js"></script>
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item">Repuestos</span>
+            <span class="menu-item">Taller</span>
+            <span class="menu-item">Contacto</span>
+        </div>
+
+        <!-- Botón tipo toggle -->
+        <div class="switch" onclick="toggleSwitch()"></div>
+
+
+
+
+
+        <!-- Estyle of the page in the down part-->
+        <div class="recuadro-inferior">
+            <div class="grupo-info">
+              <span class="info-item financiacion">TotesBGA Financiación</span>
+              <span class="info-item cookie">Cookie Settings</span>
+              <span class="info-item acercade">Acerca de</span>
+              <span class="info-item privacidad">Privacidad</span>
+              <span class="info-item nuestrosistema">Nuestro Sistema</span>
+            </div>
+            <div class="grupo-info">
+              <span class="info-item politicadeprotecciondedatos">Política de Protección De Datos Personales</span>
+              <span class="info-item texto-normal">© 2025. TotesBGA Colombia. Todos los derechos reservados</span>
+              <img src="../MarcaFrame/Images/logo-totes0.png" alt="logo" class="Logo-Imagen-Inferior">
+              
+              <!-- Contenetor Logo-->
+          </div>
+          </div>
+
+
+    </div>
+
+</body>
+</html>
