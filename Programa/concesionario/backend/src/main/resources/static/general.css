@@ -14,52 +14,52 @@
 }
 
 .contenedor-imagen {
-    width: 18vw; /* Ancho relativo a la ventana */
-    height: 16vh; /* Alto relativo a la ventana */
-    background-image: url('MarcaFrame/Images/logo-totes0.png');
-    background-size: contain; /* Ajusta la imagen para cubrir el área */
-    background-position: center; /* Centra la imagen */
-    display: flex; /* Permite posicionar el contenido */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    box-sizing: border-box;
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    margin-left: 3vw;
-    margin-top: 3vh;
-    transition: background-image 2s ease; /* Transición suave */
+  width: 18vw; /* Width relative to window */
+  height: 16vh; /* Height relative to window */
+  background-image: url('MarcaFrame/Images/logo-totes0.png');
+  background-size: contain; /* Adjusts image to fill area */
+  background-position: center; /* Centers image */
+  display: flex; /* Allows positioning of content */
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  box-sizing: border-box;
+  background-repeat: no-repeat; /* Prevents image repetition */
+  margin-left: 3vw;
+  margin-top: 3vh;
+  transition: background-image 2s ease; /* Smooth transition */
 }
 
 
 
-/* Estilo para el menú superior */
+/* Style for the top menu */
 .barra-menu-top {
-  margin-top: -11vh; /* Lo ubica al inicio vertical */
-  margin-left: 6vw; /* Lo alinea a la izquierda */
-  width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  display: flex; /* Usa flexbox para la distribución */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Centra los elementos verticalmente */
-  padding: 2vh 3vw; /* Espacio interno (2% vertical, 3% horizontal) */
-  box-sizing: border-box; /* Incluye padding en el tamaño total */
-  gap: 7vw; /* Espacio entre las opciones del menú */
-  transition: background 2.5s ease-in-out; /* Transición suave */
+  margin-top: -11vh; /* Puts it at the top vertically */
+  margin-left: 6vw; /* Aligns it to the left */
+  width: 100vw; /* Takes up the entire width of the screen */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  padding: 2vh 3vw; /* Inner space (2% vertical, 3% horizontal) */
+  box-sizing: border-box; /* Includes padding in the overall size */
+  gap: 7vw; /* Space between menu options */
+  transition: background 2.5s ease-in-out; /* Smooth transition */
 }
 
 
-/* Estilo de los elementos del menú */
+/* Style of menu items */
 .menu-item {
-  color: white; /* Texto en color blanco */
-  font-family: "Poppins-SemiBold", sans-serif; /* Fuente */
-  font-size: 1.8vw; /* Tamaño relativo al ancho de la pantalla */
-  font-weight: 600; /* Negrita */
-  cursor: pointer; /* Cursor de mano al pasar */
-  transition: transform 1s ease; /* Animación suave */
-  transition: color 2.5s ease-in-out; /* Cambio de color suave */
+  color: white; /* White text color */
+  font-family: "Poppins-SemiBold", sans-serif; /* Font */
+  font-size: 1.8vw; /* Size relative to screen width */
+  font-weight: 600; /* Bold */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: transform 1s ease; /* Smooth animation */
+  transition: color 2.5s ease-in-out; /* Smooth color change */
 }
 
-/* Aumentar el tamaño al pasar el mouse */
+/* Increase size on hover */
 .menu-item:hover {
-  transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+  transform: scale(1.1); /* Increase the size slightly */
 }
 
   
@@ -72,18 +72,18 @@
     height: auto;
     background-color: #2C2C2C;
     display: flex;
-    justify-content: space-between; /* Espacio uniforme entre grupos */
+    justify-content: space-between; /* Even spacing between groups */
     align-items: center;
-    padding: 1.5vh 5vw; /* Espaciado interno */
+    padding: 1.5vh 5vw; /* Internal spacing */
     color: white;
     font-family: 'Poppins', sans-serif;
-    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    flex-wrap: wrap; /* To adapt to small screens */
   }
   
   .info-item{
-    padding: 5vh 4vw; /* Espacio interno (2% vertical, 3% horizontal) */
-    font-size: 1.0vw; /* Tamaño relativo al ancho de la pantalla */
-    margin-left: -4vw;  /* Asegura que no haya margen izquierdo extra */
+    padding: 5vh 4vw; /* Inner space (2% vertical, 3% horizontal) */
+    font-size: 1.0vw; /* Size relative to screen width */
+    margin-left: -4vw; /* Ensures there is no extra left margin */
   }
   
   .info-item:hover {
@@ -96,21 +96,21 @@
     height: auto;
     margin-left: 9vw;
     vertical-align: middle;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; /* Center horizontally */
     box-sizing: border-box;
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-repeat: no-repeat; /* Avoid image repetition */
     margin-top: -7vh;
   }
   
   
-  /*Dark Mode Light Mode*/
-/* Contenedor del switch */
-/* Contenedor del switch (vertical) */
+/* Dark Mode Light Mode*/
+/* Contenetor del switch */
+/* Contenetor del switch (vertical) */
 .switch {
-  width: 2.5vw;  /* 2.5% del ancho de la pantalla */
-  height: 7vh; /* 5% del alto de la pantalla */
+  width: 2.5vw; /* 2.5% of screen width */
+  height: 7vh; /* 5% of screen height */
   background-color: #ccc;
-  border-radius: 2.5vw; /* Redondeado según el ancho */
+  border-radius: 2.5vw; /* Rounded to width */
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -121,26 +121,26 @@
   margin-top: -8vh;
 }
 
-/* La ruedita dentro del switch */
+/* The wheel inside the switch */
 .switch::before {
   content: "";
-  width: 1.5vw;  /* 2% del ancho de la pantalla */
-  height: 1.5vw;  /* 2% del ancho para mantenerlo circular */
+  width: 1.5vw; /* 2% of the screen width */
+  height: 1.5vw; /* 2% of the width to keep it circular */
   background-color: white;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 0.5vh; /* Inicialmente arriba */
+  top: 0.5vh; /* Initially on top */
   transition: top 0.3s;
 }
 
-/* Cuando el switch está activado */
+/* When the switch is activated */
 .switch.active {
   background-color: #4CAF50;
 }
 
 .switch.active::before {
-  top: 2.5vh; /* Mueve la ruedita hacia abajo */
+  top: 2.5vh; /* Move the wheel down */
 }
 

@@ -3,34 +3,34 @@
 
 /* Menu Box*/
 .encuentra-tu-auto-box{
-    width: 45vw; /* Ancho del recuadro (50% del ancho de la pantalla) */
-    height: auto; /* Altura ajustable según el contenido */
+    width: 45vw; /* Box width (50% of screen width */
+    height: auto; /* Adjustable height according to content */
     margin-top: 18vh;
     margin-left: 3vw;
-    display: flex; /* Usa flexbox para controlar la disposición */
-    flex-direction: column; /* Apila los elementos en columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: flex-start; /* Alinea el texto a la izquierda */
-    padding: 2vw; /* Espacio interno alrededor del contenido */
-    box-sizing: border-box; /* Incluye padding en el tamaño total */
-}
+    display: flex; /* Use flexbox to control layout */
+    flex-direction: column; /* Stack items in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align text to the left */
+    padding: 2vw; /* Inner space around content */
+    box-sizing: border-box; /* Include padding in overall size */
+  }
 
   .Encuentra-el-auto-ideal-para-ti-al {
     color: #ffffff;
     font-family: "Poppins-SemiBold", sans-serif;
-    font-size: 2.5vw; /* Tamaño relativo al ancho de la pantalla */
+    font-size: 2.5vw; /* Size relative to screen width */
     font-weight: 600;
-    line-height: 1.2; /* Espaciado entre líneas */
-    margin: 0; /* Elimina márgenes adicionales */
-    transition: color 2.0s ease-in-out; /* Transición suave del color */
+    line-height: 1.2; /* Line spacing */
+    margin: 0; /* Remove extra margins */
+    transition: color 2.0s ease-in-out; /* Smooth color transition */
   }
 
   .precio-page{
     color: #ff335f;
     font-family: "Poppins-SemiBold", sans-serif;
-    font-size: 2.8vw; /* Ligeramente más grande */
+    font-size: 2.8vw; /* Slightly larger */
     font-weight: 600;
-    margin-top: 1vh; /* Espacio entre el texto blanco y este */
+    margin-top: 1vh; /* Space between white text and this one */
     transition: color 2.0s ease-in-out; 
   }
 
@@ -67,16 +67,16 @@
 
 /*Image Principal Car*/
 .principal-car-image{
-  width: 50vw; /* Ancho relativo a la ventana */
-  height: 50vh; /* Alto relativo a la ventana */
+  width: 50vw; /* Width relative to window */
+  height: 50vh; /* Height relative to window */
   background-image: url('../MarcaFrame/Images/image-440.png');
-  background-size: contain; /* Ajusta la imagen para cubrir el área */
-  background-position: center; /* Centra la imagen */
-  display: flex; /* Permite posicionar el contenido */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
+  background-size: contain; /* Adjust the image to cover the area */
+  background-position: center; /* Center the image */
+  display: flex; /* Allows you to position the content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   box-sizing: border-box;
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-repeat: no-repeat; /* Avoid image repetition */
   margin-left: 48vw;
   margin-top: -35vh;
 }

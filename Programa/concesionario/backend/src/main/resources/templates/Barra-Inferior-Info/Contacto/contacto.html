@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Correct Rute With Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/Barra-Inferior-Info-Frame/Contacto/contacto.css}">
+    <script th:src="@{/redirections.js}"></script>
+    <script th:src="@{/Barra-Inferior-Info-Frame/Contacto/contacto.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+    <!-- Style Of Thee Page-->
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+      </style>
+</head>
+<body class="pag-conacto">
+    <div class="concesionario">
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item repuestos">Repuestos</span>
+            <span class="menu-item taller">Taller</span>
+            <span class="menu-item contacto">Contacto</span>
+        </div>
+
+                
+        <!-- Botón tipo toggle -->
+        <div class="switch" onclick="toggleSwitch()"></div>
+
+        <!-- Page-->
+         <div class="queremos-escucharte-cuadro">
+                <span class="queremos-escucharte">
+                    QUEREMOS ESCUCHARTE
+                </span>
+         </div>
+
+         <div class="text-queremos-escucharte">
+            <span class="tu-opinion">
+                Tu opinión y tus comentarios son muy importantes para nosotros. Nos aseguraremos de revisar tus 
+                comentarios y darte respuesta tan pronto como nos sea posible.
+            </span>
+         </div>
+
+         <!-- SECTION CONTACT -->
+
+         <div class="contact-form">
+            <form action="#" method="POST">
+
+                <!-- ROW 1, First name Last name-->
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                 </div>
+
+                 <!-- ROW 2, Mail and Telephone-->
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico*</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                </div>
+
+                <!-- ROW 3, Department and City-->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departamento">Departamento*</label>
+                        <select id="departamento" name="departamento" required>
+                            <option value="">Seleccione un departamento</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad*</label>
+                        <select id="ciudad" name="ciudad" required>
+                            <option value="">Seleccione una ciudad</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <!-- Comments-->
+                <div class="form-group full-width">
+                    <label for="comentarios">Comentarios*</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                </div>
+
+                <!-- Authorization-->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="autorizacion" name="autorizacion" required>
+                    <label for="autorizacion">
+                        Autorizo el tratamiento de mis datos personales de acuerdo con los
+                        términos establecidos en la <strong>POLÍTICA DE PRIVACIDAD</strong>.
+                    </label>
+                </div>
+
+
+                <!-- Send button-->
+                <div class="form-group button-container">
+                    <button type="submit" class="contact-button">Contáctanos</button>
+                </div>
+
+
+                <!-- Schedule Appointment Button-->
+                 <div class="form-group button-container">
+                    <button type="button" class="schedule-button">Agendar Cita</button>
+                </div>
+
+            </form>
+         </div>
+
+
+
+        <!-- -->
+         
+
+
+
+        <!-- Estyle of the page in the down part-->
+        <div class="recuadro-inferior">
+            <div class="grupo-info">
+              <span class="info-item financiacion">TotesBGA Financiación</span>
+              <span class="info-item cookie">Cookie Settings</span>
+              <span class="info-item acercade">Acerca de</span>
+              <span class="info-item privacidad">Privacidad</span>
+              <span class="info-item nuestrosistema">Nuestro Sistema</span>
+            </div>
+            <div class="grupo-info">
+              <span class="info-item politicadeprotecciondedatos">Política de Protección De Datos Personales</span>
+              <span class="info-item texto-normal">© 2025. TotesBGA Colombia. Todos los derechos reservados</span>
+              <img src="../MarcaFrame/Images/logo-totes0.png" alt="logo" class="Logo-Imagen-Inferior">
+              
+              <!-- Contenetor Logo-->
+          </div>
+          </div>
+    </div>
+</body>
+
+</html>
