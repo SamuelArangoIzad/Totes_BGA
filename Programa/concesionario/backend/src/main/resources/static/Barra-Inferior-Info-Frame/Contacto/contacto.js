@@ -130,3 +130,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+//_________________________________________________________________
+// CHANGE COLOR OF THE PAGE
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Elements of text of the html marca
+    const elementosRosaContacto = document.querySelectorAll(".queremos-escucharte, .schedule-button");
+    const elementosBlancosContacto = document.querySelectorAll(".tu-opinion, .contact-form, .label, .input, textarea, #nombre, #apellido, #telefono, #correo, #departamento, #ciudad");
+    const elementoCuadradoContacto = document.querySelectorAll(".contact-button");
+    // Get inputs
+    const camposContacto = document.querySelectorAll("#nombre, #apellido, #telefono, #correo, #departamento, #ciudad");
+    const selectDepartamento = document.querySelector("#departamento");
+    const selectCiudad = document.querySelector("#ciudad");
+
+
+    function aplicarTema(modoOscuro) {
+        if (modoOscuro) {
+            elementosRosaContacto.forEach(el => el.style.color = "#ff335f"); // Vuelve a rosa
+            elementosBlancosContacto.forEach(el => el.style.color = "#ffffff"); // Vuelve a blanco
+            elementoCuadradoContacto.forEach(el => el.style.backgroundColor = "#ff335f");
+            selectDepartamento.style.color = "#ff335f";
+            selectCiudad.style.color = "#ff335f";
+        } else {
+            elementosRosaContacto.forEach(el => el.style.color = "#00289F"); // change to blue
+            elementosBlancosContacto.forEach(el => el.style.color = "#000000"); // change to black
+            elementoCuadradoContacto.forEach(el => el.style.backgroundColor = "#00289F");
+
+            // change the line down of the inputs to black in light mode
+            camposContacto.forEach(el => el.style.borderBottom = "0.3vh solid black");
+            selectDepartamento.style.color = "#00289F";
+            selectCiudad.style.color = "#00289F";
+        }
+    }
+
+        // Check localStorage theme
+        const temaGuardado = localStorage.getItem("modoOscuro") === "true";
+        aplicarTema(temaGuardado);
+    
+        // Event listener personalizado para sincronizar desde redirection.js
+        window.addEventListener("temaCambiado", function () {
+            const temaGuardado = localStorage.getItem("modoOscuro") === "true";
+            aplicarTema(temaGuardado);
+        });
+    
+
+});
