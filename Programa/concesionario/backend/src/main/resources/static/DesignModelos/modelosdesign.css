@@ -1,0 +1,105 @@
+/* Fonts Import of word Poppins-semibold of Google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.ModelosTitlecarros{
+  font-family: "Poppins-SemiBold", sans-serif; /* Font */
+  margin-top: 7vh;
+  margin-left: 35vw;
+  font-size: 1.3vw; /* Size relative to screen width */
+  font-weight: 400; /* Bold */
+  transition: color 2.0s ease-in-out; 
+}
+
+.contenedor-modelos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+  gap: 2vw; /* Espaciado entre tarjetas */
+  justify-content: center; /* Centrar las tarjetas en la línea */
+  padding: 2vh;
+}
+
+
+.modelo-item-image {
+  width: 12vw;  /* Ajusta el tamaño según necesites */
+  height: auto;  /* Mantiene la proporción */
+}
+
+.modelo-item-carro {
+  width: calc(30vw - 2vw); /* Máximo 3 tarjetas por fila */
+  background-color: rgba(0, 0, 0, 0.2); /* Negro con 50% de transparencia */
+  padding: 1vh 1vw; /* Espaciado interno en base al tamaño de la pantalla */
+  border-radius: 2vh; /* Bordes redondeados adaptativos */
+  color: white; /* Texto en color blanco */
+  width: 15vw; /* Ancho del recuadro como el 40% del ancho de la pantalla */
+  height: auto; /* Altura del recuadro como el 30% de la altura de la pantalla */
+  display: flex; /* Para centrar el contenido */
+  flex-direction: column; /* Organiza los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center; /* Centra el texto */
+  margin-left: 3vw;
+  margin-top: 2vh;
+  font-family: "Poppins-SemiBold", sans-serif; /* Font */
+}
+
+.modelo-nombre{
+  font-size: 1.1vw; /* Tamaño relativo al ancho de la pantalla */
+  font-weight: 400; /* Negrita */
+  margin-bottom: 1vh;
+  margin-top: -7vh;
+}
+
+.modelo-nuevoUsado{
+  font-size: 1.0vw; /* Tamaño relativo al ancho de la pantalla */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  transition: color 3.0s ease-in-out; 
+}
+
+.modelo-Costo{
+  font-size: 1.2vw; /* Tamaño relativo al ancho de la pantalla */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 1vh;
+}
+
+
+/*/*==================*/
+/*BOTOM*/
+/*==================*/
+
+/* Estilos del botón */
+.boton-informacion {
+  background-color: rgb(234, 229, 229); /* Fondo blanco */
+  color: rgb(38, 35, 35); /* Texto negro */
+  border-radius: 2vh; /* Bordes redondeados */
+  padding: 1vh 2vw; /* Espaciado adaptado al tamaño de pantalla */
+  font-size: 2vh; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: 0.3s; /* Transición suave */
+  width: 80%; /* Ocupa el 80% del ancho de la tarjeta */
+  margin-top: 1vh;
+}
+
+/* Efecto al pasar el mouse */
+.boton-informacion:hover {
+  background-color: rgb(51, 47, 47);
+  color: white;
+}
+
+
+
+/*/*==================*/
+/*CARROS*/
+/*==================*/
+
+.volver-carros a{
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  margin-top: 0vh;
+  font-size: 0.6vw;
+  font-weight: 600;
+  transition: color 3.0s ease-in-out; 
+}
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Correct Rute With Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/DesignModelos/modelosdesign.css}">
+    <link rel="stylesheet" th:href="@{/DesignCarros/carrosDesign.css}">
+    <link rel="stylesheet" th:href="@{/MarcaFrame/marcaFrame.css}">
+    
+
+    <script th:src="@{/redirections.js}"></script>
+    <script th:src="@{/DesignModelos/modeloDesign.js}"></script>
+    <script th:src="@{/DesignCarros/carroVisual.js}"></script>
+
+    <!-- Style Of Thee Page-->
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="pag-carroapartirdelmodelo">
+    <div class="concesionario">
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item">Matriz</span>
+            <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item">Accesorios</span>
+            <span class="menu-item">Repuestos</span>
+            <span class="menu-item">Taller</span>
+            <span class="menu-item contacto">Contacto</span>
+            
+        </div>
+
+        <!-- Botón tipo toggle -->
+        <div class="switch" onclick="toggleSwitch()" ></div>
+
+        <!-- Circle Animation -->
+        <div class="ellipse-animation"></div>
+
+        <!-- CARS MODELS-->
+        <div th:if="${error}" class="alert alert-danger">
+           <p th:text="${error}"></p>
+        </div>
+      
+
+        <!-- INFO CARROOO -->
+
+        <div class="recuadro-info-carro">
+
+          <!-- INFO GENERAL RECUADRO -->
+
+
+        <div class="marca-carro-modelo">
+        <p th:if="!${error}"><strong></strong> <span th:text="${modelo.marca.nombre}"></span></p>
+      </div>
+
+      <div class="titulo-modelo-carro">
+        <h2 th:if="!${error}" th:text="'Detalles de ' + ${modelo.nombre}"></h2>
+      </div>
+
+      
+      <div class="imagen-carro">
+        <img th:if="!${error}" th:src="@{'http://localhost:8081' + ${carro.imagenUrl}}" alt="Imagen del carro">
+      </div>
+      
+
+        <div class="cuadrado-design-detalles">
+
+          <div class="anio-carro">
+            <p th:if="!${error}"><strong></strong> <span th:text="${carro.anio}"></span></p>
+          </div>
+  
+          <div class="descripcion-carro">
+            <p th:if="!${error}"><strong></strong> <span th:text="${carro.descripcion}"></span></p>
+          </div>
+
+          <div class="Tasa-Aceleracion-Carro">
+          <p th:if="!${error}"><span th:text="${carro.tasaAceleracion} + 's'"></span></p>
+        </div>
+        <div class="Tasa-Aceleracion">
+          <span>Aceleración 0 - 100 km/h</span>
+        </div>
+          
+
+        <div class="Velocidad-Maxima-Carro">
+          <p th:if="!${error}"><span th:text="${carro.velocidadMaxima} + ' km/h'" class=""></span></p>
+        </div>
+        <div class="Velocidad-Maxima">
+          <span>Velocidad Máxima</span>
+        </div>
+
+
+        <div class="Condicion-Carro">
+          <p th:if="!${error}"><strong></strong> <span th:text="${modelo.nuevoUsado}" class=""></span></p>
+        </div>
+        <div class="Nuevo-Usado">
+          <span>Condición</span>
+        </div>
+
+        <div class="Precio-Carro">
+          <p th:if="!${error}"><strong></strong>$<span th:text="${#numbers.formatInteger(modelo.costo, 0, 'POINT')}"></span></p>
+        </div>
+        <div class="Precio">
+          <span class="">Precio COP</span>
+        </div>
+          
+        </div>
+
+
+
+        <button class="btn-agendar">Agendar Cita</button>
+
+        <div class="volver-modelos">
+          <a th:if="${marca != null}" th:href="@{'/modelos/' + ${marca.id_marca}}">Volver a Modelos</a>
+        </div>
+
+      </div>
+      
+
+
+           <!-- Estyle of the page in the down part-->
+
+           <!-- bottom box of the page-->
+           <footer>
+            <div class="footer-content">
+              <div class="footer-column">
+                <h3>TOTES BGA</h3>
+                <p>Calle 27 # Carrera 19 – 50 </p>
+                <p>Bucaramanga, Santander</p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>CONSORCIO</h3>
+                <p><a href="../../assets/documents/POLITICA-DE-DATOS.pdf" target="_blank">Política de Tratamiento de Datos Personales</a></p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>SÍGUENOS</h3>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="../../assets/images/facebook_logo.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><img src="../../assets/images/youtube_logo.png" alt="Instagram"></a>
+                <a href="https://co.linkedin.com/" target="_blank"><img src="../../assets/images/linkedin_logo.png" alt="Twitter"></a>
+              </div>
+            </div>
+  
+            <!-- Horizontal line inside the footer -->
+            <div class="footer-divider"></div>
+  
+            <!-- Copyright Message -->
+            <div class="footer-copyright">
+                © 2025 TOTES BGA. Todos los derechos reservados.
+            </div>
+          </footer>
+        
+    </div>
+
+</body>
+
+</html>

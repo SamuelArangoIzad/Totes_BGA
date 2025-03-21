@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Correct Rute With Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/Barra-Superior-Info-Frame/Contacto/contacto.css}">
+    <link rel="stylesheet" th:href="@{/MarcaFrame/marcaFrame.css}">
+
+    <script th:src="@{/redirections.js}"></script>
+    <script th:src="@{/Barra-Superior-Info-Frame/Contacto/contacto.js}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Style Of Thee Page-->
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+      </style>
+</head>
+<body class="pag-conacto">
+    <div class="concesionario">
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item">Matriz</span>
+            <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item">Accesorios</span>
+            <span class="menu-item">Repuestos</span>
+            <span class="menu-item">Taller</span>
+            <span class="menu-item contacto">Contacto</span>
+        </div>
+
+                
+        <!-- Botón tipo toggle -->
+        <div class="switch" onclick="toggleSwitch()"></div>
+
+        <!-- Circle Animation -->
+        <div class="ellipse-animation"></div>
+
+        <!-- Page-->
+         <div class="queremos-escucharte-cuadro">
+                <span class="queremos-escucharte">
+                    QUEREMOS ESCUCHARTE
+                </span>
+         </div>
+
+         <div class="text-queremos-escucharte">
+            <span class="tu-opinion">
+                Tu opinión y tus comentarios son muy importantes para nosotros. Nos aseguraremos de revisar tus 
+                comentarios y darte respuesta tan pronto como nos sea posible.
+            </span>
+         </div>
+
+         <!-- SECTION CONTACT -->
+
+         <div class="contact-form">
+            <form action="#" method="POST">
+
+                <!-- ROW 1, First name Last name-->
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                 </div>
+
+                 <!-- ROW 2, Mail and Telephone-->
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico*</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                </div>
+
+                <!-- ROW 3, Department and City-->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departamento">Departamento*</label>
+                        <select id="departamento" name="departamento" required>
+                            <option value="">Seleccione un departamento</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad*</label>
+                        <select id="ciudad" name="ciudad" required>
+                            <option value="">Seleccione una ciudad</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <!-- Comments-->
+                <div class="form-group full-width">
+                    <label for="comentarios">Comentarios*</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                </div>
+
+                <!-- Authorization-->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="autorizacion" name="autorizacion" required>
+                    <label for="autorizacion">
+                        Autorizo el tratamiento de mis datos personales de acuerdo con los
+                        términos establecidos en la <strong>POLÍTICA DE PRIVACIDAD</strong>.
+                    </label>
+                </div>
+
+
+                <!-- Send button-->
+                <div class="form-group button-container">
+                    <button type="submit" class="contact-button">Contáctanos</button>
+                </div>
+
+
+                
+            </form>
+                <!-- Schedule Appointment Button-->
+                 <div class="form-group button-container">
+                    <button type="button" class="schedule-button">Agendar Cita</button>
+                </div>
+
+                <div class="form-group fechacita">
+                    <label for="fecha-cita" class="label textSelecciona">Selecciona la fecha de la cita</label>
+                    <input type="date" id="fecha-cita" class="input" required>
+                </div>
+                
+                <div class="form-group horacita">
+                    <label for="hora-cita" class="label textSelecciona">Selecciona la hora de la cita</label>
+                    <input type="time" id="hora-cita" class="input" required>
+                </div>
+
+         </div>
+
+        <!-- -->
+         
+        <!-- Estyle of the page in the down part-->
+        <footer>
+            <div class="footer-content">
+              <div class="footer-column">
+                <h3>TOTES BGA</h3>
+                <p>Calle 27 # Carrera 19 – 50 </p>
+                <p>Bucaramanga, Santander</p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>CONSORCIO</h3>
+                <p><a href="../assets/documents/POLITICA-DE-DATOS.pdf" target="_blank">Política de Tratamiento de Datos Personales</a></p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>SÍGUENOS</h3>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="../assets/images/facebook_logo.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><img src="../assets/images/youtube_logo.png" alt="Instagram"></a>
+                <a href="https://co.linkedin.com/" target="_blank"><img src="../assets/images/linkedin_logo.png" alt="Twitter"></a>
+              </div>
+            </div>
+  
+            <!-- Horizontal line inside the footer -->
+            <div class="footer-divider"></div>
+  
+            <!-- Copyright Message -->
+            <div class="footer-copyright">
+                © 2025 TOTES BGA. Todos los derechos reservados.
+            </div>
+          </footer>
+
+
+    </div>
+</body>
+
+</html>

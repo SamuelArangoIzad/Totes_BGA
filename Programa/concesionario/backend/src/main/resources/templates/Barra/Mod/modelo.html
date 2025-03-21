@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Totes_BGA</title>
+    
+    <!-- Correct Rute With Thymeleaf -->
+    <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/DesignModelos/modelosdesign.css}">
+    <link rel="stylesheet" th:href="@{/MarcaFrame/marcaFrame.css}">
+
+    <script th:src="@{/redirections.js}"></script>
+    <script th:src="@{/DesignModelos/modeloDesign.js}"></script>
+    <script th:src="@{/DesignModelos/updateModelo.js}"></script>
+    <script th:src="@{/DesignCarros/carroVisual.js}"></script>
+
+    <!-- Style Of Thee Page-->
+    <style>a,button,input,select,h1,h2,h3,h4,h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        menu, ol, ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="pag-modeloapartirdemarca">
+    <div class="concesionario">
+
+        <!-- Image Contenetor-->
+        <div class="contenedor-imagen"></div>
+
+        <!-- Bar Menu TOP-->
+        <div class="barra-menu-top">
+            <span class="menu-item">Inicio</span>
+            <span class="menu-item">Matriz</span>
+            <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item">Accesorios</span>
+            <span class="menu-item">Repuestos</span>
+            <span class="menu-item">Taller</span>
+            <span class="menu-item contacto">Contacto</span>
+            
+        </div>
+
+        <!-- Botón tipo toggle -->
+        <div class="switch" onclick="toggleSwitch()" ></div>
+
+        <!-- Circle Animation -->
+        <div class="ellipse-animation"></div>
+
+        <!-- CARS MODELS-->
+
+        <!-- Controller MarcaController With Java-->
+        <div class="ModelosTitlecarros">
+            <h2 id="tituloModelos" th:utext="'Todos nuestros modelos en ' + ${marca.nombre}"></h2>
+        </div>
+
+
+           <div class="contenedor-modelos">
+               <div th:each="modelo : ${modelos}" class="modelo-item-carro">
+                   <img th:src="@{'http://localhost:8081' + ${modelo.imagenUrl}}" alt="Imagen del modelo" class="modelo-item-image">
+                   <p th:text="${modelo.nombre}" class="modelo-nombre"></p>
+                   <p th:text="' ' + ${modelo.nuevoUsado}" class="modelo-nuevoUsado"></p>
+                   <p th:text="'COP $' + ${#numbers.formatInteger(modelo.costo, 0, 'POINT')}" class="modelo-Costo"></p>  
+                    
+                   <!-- Botón con enlace dinámico -->
+                   <a th:href="@{/carro/detalle(nombreModelo=${modelo.nombre})}" class="boton-informacion">INFORMACIÓN</a>
+
+                   <div class="volver-carros">
+                    <a th:if="${marca != null}" th:href="@{'/marca'}">Volver</a>
+                  </div>
+               </div>
+           </div>
+
+
+
+           
+           <!-- Estyle of the page in the down part-->
+
+           <!-- bottom box of the page-->
+           <footer>
+            <div class="footer-content">
+              <div class="footer-column">
+                <h3>TOTES BGA</h3>
+                <p>Calle 27 # Carrera 19 – 50 </p>
+                <p>Bucaramanga, Santander</p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>CONSORCIO</h3>
+                <p><a href="../assets/documents/POLITICA-DE-DATOS.pdf" target="_blank">Política de Tratamiento de Datos Personales</a></p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>SÍGUENOS</h3>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="../assets/images/facebook_logo.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><img src="../assets/images/youtube_logo.png" alt="Instagram"></a>
+                <a href="https://co.linkedin.com/" target="_blank"><img src="../assets/images/linkedin_logo.png" alt="Twitter"></a>
+              </div>
+            </div>
+  
+            <!-- Horizontal line inside the footer -->
+            <div class="footer-divider"></div>
+  
+            <!-- Copyright Message -->
+            <div class="footer-copyright">
+                © 2025 TOTES BGA. Todos los derechos reservados.
+            </div>
+          </footer>
+        
+    </div>
+
+</body>
+
+</html>
