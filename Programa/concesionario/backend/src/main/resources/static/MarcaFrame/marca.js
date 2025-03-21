@@ -33,5 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
             aplicarTema(temaGuardado);
         });
     
-
 });

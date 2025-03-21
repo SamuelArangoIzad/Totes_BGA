@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.backend.concesionario.model.Marca;
 import com.example.backend.concesionario.service.MarcaService;
@@ -33,41 +34,16 @@ public class MarcaController {
 
     //REDIRECTIONS TO OTHER SPACES BY WORDS
 
-    @GetMapping("/financiacion")
-    public String mostrarFinanciacion() {
-    return "Barra-Inferior-Info/TotesBgaFinanciacion/financiacion"; // Redirige a templates/TotesBgaFinanciacion/financiacion.html
-    }
-
-    @GetMapping("/cookiesettings")
-    public String mostrarCookie() {
-    return "Barra-Inferior-Info/CookieSettings/cookiesettings"; 
-    }
-
-    @GetMapping("/acercade")
-    public String mostrarAcercaDe() {
-    return "Barra-Inferior-Info/AcercaDe/acercade";
-    }
-
-    @GetMapping("/privacidad")
-    public String mostrarPrivacidad() {
-    return "Barra-Inferior-Info/Privacidad/privacidad"; 
-    }
-
-    @GetMapping("/nuestrosistema")
-    public String mostrarNuestroSistema() {
-    return "Barra-Inferior-Info/nuestroSistema/nuestrosistema"; 
-    }
-
-    @GetMapping("/protecciondedatospersonales")
-    public String mostrarprotecciondedatospersonales() {
-    return "Barra-Inferior-Info/politicaDeProteccionDeDatos/protecciondedatospersonales"; 
-    }
-
     @GetMapping("/contacto")
     public String mostrarContacto() {
-    return "Barra-Inferior-Info/Contacto/contacto"; 
+    return "Barra/Contacto/contacto"; 
     }
 
-
+     // NUEVO ENDPOINT PARA OBTENER MARCAS EN FORMATO JSON
+    @GetMapping("/api/marcas")
+    @ResponseBody
+    public List<Marca> obtenerMarcas() {
+        return marcaService.getAllMarcas();
+    }
 
 }

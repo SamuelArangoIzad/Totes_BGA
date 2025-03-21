@@ -10,8 +10,12 @@
     <!-- Correct Rute With Thymeleaf -->
     <link rel="stylesheet" th:href="@{/MarcaFrame/marcaFrame.css}">
     <link rel="stylesheet" th:href="@{/general.css}">
+    <link rel="stylesheet" th:href="@{/DesignMarcas/marcasdesign.css}">
+
     <script th:src="@{/redirections.js}"></script>
     <script th:src="@{/MarcaFrame/marca.js}"></script>
+    <script th:src="@{/MarcaFrame/updateMarca.js}"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
@@ -38,17 +42,19 @@
 <body class="pag-marca">
     <div class="concesionario">
 
-
         <!-- Image Contenetor-->
         <div class="contenedor-imagen"></div>
 
         <!-- Bar Menu TOP-->
         <div class="barra-menu-top">
             <span class="menu-item">Inicio</span>
+            <span class="menu-item">Matriz</span>
             <span class="menu-item inicial">Vehículos</span>
+            <span class="menu-item">Accesorios</span>
             <span class="menu-item">Repuestos</span>
             <span class="menu-item">Taller</span>
             <span class="menu-item contacto">Contacto</span>
+            
         </div>
         
         
@@ -96,36 +102,53 @@
            <!-- Controller MarcaController With Java-->
 
            <div class="contenedor-marcas">
-             <div th:each="marca : ${marcas}" class="marca-item">
-                 <p th:text="${marca.nombre}"></p>
-                 <img th:src="@{${marca.imagenUrl}}" alt="Imagen de la marca">
-             </div>
-           </div>
+            <div th:each="marca : ${marcas}" class="marca-item">
+                <a th:href="@{/modelos/{id}(id=${marca.id_marca})}" class="marca-link">
+                    <img th:src="@{'http://localhost:8081' + ${marca.imagenUrl}}" alt="Imagen de la marca" class="marca-item-image">
+                    <p th:text="${marca.nombre}" class="marca-nombre"></p>
+                </a>
+            </div>
+        </div>
 
+      
+        
 
+           <!-- ===================================== -->
 
            <!-- Dont Delete-->
-
 
            <!-- Estyle of the page in the down part-->
 
            <!-- bottom box of the page-->
-            <div class="recuadro-inferior">
-              <div class="grupo-info">
-                <span class="info-item financiacion">TotesBGA Financiación</span>
-                <span class="info-item cookie">Cookie Settings</span>
-                <span class="info-item acercade">Acerca de</span>
-                <span class="info-item privacidad">Privacidad</span>
-                <span class="info-item nuestrosistema">Nuestro Sistema</span>
+           <footer>
+            <div class="footer-content">
+              <div class="footer-column">
+                <h3>TOTES BGA</h3>
+                <p>Calle 27 # Carrera 19 – 50 </p>
+                <p>Bucaramanga, Santander</p>
               </div>
-              <div class="grupo-info">
-                <span class="info-item politicadeprotecciondedatos">Política de Protección De Datos Personales</span>
-                <span class="info-item texto-normal">© 2025. TotesBGA Colombia. Todos los derechos reservados</span>
-                <img src="../MarcaFrame/Images/logo-totes0.png" alt="logo" class="Logo-Imagen-Inferior">
-                
-                <!-- Contenetor Logo-->
+  
+              <div class="footer-column">
+                <h3>CONSORCIO</h3>
+                <p><a href="assets/documents/POLITICA-DE-DATOS.pdf" target="_blank">Política de Tratamiento de Datos Personales</a></p>
+              </div>
+  
+              <div class="footer-column">
+                <h3>SÍGUENOS</h3>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="assets/images/facebook_logo.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank"><img src="assets/images/youtube_logo.png" alt="Instagram"></a>
+                <a href="https://co.linkedin.com/" target="_blank"><img src="assets/images/linkedin_logo.png" alt="Twitter"></a>
+              </div>
             </div>
+  
+            <!-- Horizontal line inside the footer -->
+            <div class="footer-divider"></div>
+  
+            <!-- Copyright Message -->
+            <div class="footer-copyright">
+                © 2025 TOTES BGA. Todos los derechos reservados.
             </div>
+          </footer>
 
     </div>
 </body>

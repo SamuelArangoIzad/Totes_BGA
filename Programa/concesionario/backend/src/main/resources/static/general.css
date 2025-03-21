@@ -1,22 +1,24 @@
 /* Fonts Import of word Poppins-semibold of Google*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-.concesionario,
-.concesionario * {
-  box-sizing: border-box;
-}
-.concesionario {
-    background: #191919;
-    height: 2527px;
-    position: relative;
-    overflow: hidden;
-    transition: background 2s;
+/*THIS IS IMPORTANT BY PAGE DINAMIC*/
+.concesionario{
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  min-height: 100vh; /* Asegura que tenga al menos la altura de la pantalla */
+  height: auto; /* Permite que el contenedor crezca con base en el contenido */
+  width: 100%; /* Que ocupe todo el ancho disponible */
+  display: flex; /* Si deseas alinear los elementos */
+  flex-direction: column; /* Para que los elementos se apilen */
+  justify-content: flex-start; /* Alineación inicial */
+  box-sizing: border-box; /* Para que los márgenes y paddings no afecten el tamaño */
+  overflow-y: auto; /* Permite el scroll vertical cuando el contenido sobrepasa */
+  padding-bottom: 15vh; /* Espaciado para evitar que el botón quede pegado */
 }
 
 .contenedor-imagen {
   width: 18vw; /* Width relative to window */
   height: 16vh; /* Height relative to window */
-  background-image: url('MarcaFrame/Images/logo-totes0.png');
+  background-image: url('/MarcaFrame/Images/logo-totes1.png');
   background-size: contain; /* Adjusts image to fill area */
   background-position: center; /* Centers image */
   display: flex; /* Allows positioning of content */
@@ -29,8 +31,6 @@
   transition: background-image 2s ease; /* Smooth transition */
 }
 
-
-
 /* Style for the top menu */
 .barra-menu-top {
   margin-top: -11vh; /* Puts it at the top vertically */
@@ -41,7 +41,7 @@
   align-items: center; /* Centers items vertically */
   padding: 2vh 3vw; /* Inner space (2% vertical, 3% horizontal) */
   box-sizing: border-box; /* Includes padding in the overall size */
-  gap: 7vw; /* Space between menu options */
+  gap: 5vw; /* Space between menu options */
   transition: background 2.5s ease-in-out; /* Smooth transition */
 }
 
@@ -50,7 +50,7 @@
 .menu-item {
   color: white; /* White text color */
   font-family: "Poppins-SemiBold", sans-serif; /* Font */
-  font-size: 1.8vw; /* Size relative to screen width */
+  font-size: 1.2vw; /* Size relative to screen width */
   font-weight: 600; /* Bold */
   cursor: pointer; /* Hand cursor on hover */
   transition: transform 1s ease; /* Smooth animation */
@@ -64,45 +64,73 @@
 
   
   /* Data Down in the page*/
-.recuadro-inferior {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    background-color: #2C2C2C;
-    display: flex;
-    justify-content: space-between; /* Even spacing between groups */
-    align-items: center;
-    padding: 1.5vh 5vw; /* Internal spacing */
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    flex-wrap: wrap; /* To adapt to small screens */
-  }
-  
-  .info-item{
-    padding: 5vh 4vw; /* Inner space (2% vertical, 3% horizontal) */
-    font-size: 1.0vw; /* Size relative to screen width */
-    margin-left: -4vw; /* Ensures there is no extra left margin */
-  }
-  
-  .info-item:hover {
-    text-decoration: underline;
-    /*cursor: pointer;*/
-  }
-  
-  .Logo-Imagen-Inferior{
-    width: 15vw;
-    height: auto;
-    margin-left: 9vw;
-    vertical-align: middle;
-    justify-content: center; /* Center horizontally */
-    box-sizing: border-box;
-    background-repeat: no-repeat; /* Avoid image repetition */
-    margin-top: -7vh;
-  }
-  
-  
+  /*More Data*/
+
+/* Footer Section */
+footer {
+  position: fixed; /* Fija el footer en la parte inferior */
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  padding: 1.5vh 3vw; /* Reduce el padding vertical y horizontal */
+  font-size: 0.75rem; /* Reduce el tamaño de fuente */
+  font-family: "Poppins-SemiBold", sans-serif;
+}
+
+/* Contenedor principal del footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Reduce el espacio entre contenido y línea divisoria */
+  flex-wrap: wrap; /* Permite adaptarse mejor en pantallas pequeñas */
+}
+
+/* Columnas del footer */
+.footer-column {
+  flex: 1;
+  padding: 0 10px; /* Reduce el espacio lateral entre columnas */
+  min-width: 120px; /* Evita que las columnas sean demasiado estrechas */
+}
+
+/* Párrafos dentro del footer */
+.footer-column p {
+  margin: 3px 0; /* Reduce el espacio entre líneas */
+  font-size: 0.7rem; /* Disminuye tamaño de fuente */
+}
+
+/* Links dentro del footer */
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem; /* Reduce el tamaño del texto en enlaces */
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Iconos dentro del footer */
+.footer-column img {
+  width: 16px; /* Reduce el tamaño de los iconos */
+  margin-right: 3px; /* Reduce el espacio entre los iconos */
+  vertical-align: middle;
+}
+
+/* Línea divisoria del footer */
+.footer-divider {
+  border-top: 0.5px solid white; /* Hace la línea más delgada */
+  margin: 5px 0; /* Reduce el espacio antes y después de la línea divisoria */
+}
+
+/* Mensaje de copyright */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.65rem; /* Reduce el tamaño del texto */
+}
+
 /* Dark Mode Light Mode*/
 /* Contenetor del switch */
 /* Contenetor del switch (vertical) */
@@ -143,4 +171,3 @@
 .switch.active::before {
   top: 2.5vh; /* Move the wheel down */
 }
-
