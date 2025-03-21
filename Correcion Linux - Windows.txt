@@ -1,0 +1,21 @@
+Al hacer git push se presentaba un error en algunos archivos que usaban terminadores de Línea LF (Line Feed) en el programa, pero se convirtieron a CRLF (Carriage Return+Line Feed) ocurrido porque al hacer push en un OS Windows usa CRLF mientras que Linux LF.
+
+(Line Feed -\n en lenguajes de programación usado en UNIX y Linux como en MACOS indica que el cursor avanza a la siguiente linea sinregresar al inicio de la misma y el CRLF \r\n usado en Windows consiste en dos caracteres \r regresa el cursor al inicio de la linea y \n mueve el cursor a la siguiente linea)
+
+Entonces git al detectar diferencias en los finales de la línea entre sistemas operativos, cuando se clona el repositorio o edita un archivo en Windows y luego se sube al repositorio donde trabajamos LINUX, ocurren inconsistencias. Entonces para corregir el error, configuramos para que de forma automática se manejara está situación.
+
+core.autocrlf true: Convierte automáticamente CRLF a LF al hacer un commit y LF a CRLF al hacer checkout en Windows.
+
+core.eol lf: Fuerza que Git almacene los archivos con LF sin importar el sistema operativo.
+
+Con los comandos:
+
+git config --global core.autocrlf input
+
+* text=auto eol=lf   //En la raíz del proyecto
+
+git add --renormalize .
+git commit -m "Normalizando terminadores de línea a LF"
+
+git ls-files --eol
+
